@@ -26,3 +26,8 @@ def operationComment():
         return 'upload succeed'
     if request.method == 'GET':
         return comment_read()
+
+@communication.route('/test', methods=['GET'])
+def test():
+    if request.method == 'GET':
+        return 'test succeed!'
