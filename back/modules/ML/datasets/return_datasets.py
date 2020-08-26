@@ -62,21 +62,41 @@ def return_dataset_by_item(dataset_name, typeData, item):
                     each_data[0] = 'unKnown'
                 else:
                     if each_data[0] < 16.0:
-                        each_data[0] = '<16'
+                        each_data[0] = '< 16'
                     elif 55.0 >= each_data[0] >= 16.0:
                         each_data[0] = '16 - 55'
                     else:
-                        each_data[0] = '>55'
+                        each_data[0] = '> 55'
             for each_data in not_survived:
                 if each_data[0] is None:
                     each_data[0] = 'unKnown'
                 else:
                     if each_data[0] < 16.0:
-                        each_data[0] = '<16'
+                        each_data[0] = '< 16'
                     elif 55.0 >= each_data[0] >= 16.0:
                         each_data[0] = '16 - 55'
                     else:
-                        each_data[0] = '>55'
+                        each_data[0] = '> 55'
+
+        if item == 'Fare':
+            for each_data in survived:
+                if each_data[0] < 10:
+                    each_data[0] = '< 10'
+                elif 10 <= each_data[0] < 20:
+                    each_data[0] = '10 - 20'
+                elif 20 <= each_data[0] <30:
+                    each_data[0] = '20 - 30'
+                else:
+                    each_data[0] = '> 30'
+            for each_data in not_survived:
+                if each_data[0] < 10:
+                    each_data[0] = '< 10'
+                elif 10 <= each_data[0] < 20:
+                    each_data[0] = '10 - 20'
+                elif 20 <= each_data[0] <30:
+                    each_data[0] = '20 - 30'
+                else:
+                    each_data[0] = '> 30'
 
         res['survived'] = {}
         res['survived']['details'] = {}
