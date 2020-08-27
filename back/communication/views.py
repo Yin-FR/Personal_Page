@@ -7,6 +7,7 @@
 
 from flask import Blueprint, request
 from modules.communication.comment import comment_store, comment_read
+from modules.communication.album import get_album_links
 import json
 
 communication = Blueprint('communication', __name__)
@@ -27,7 +28,14 @@ def operationComment():
     if request.method == 'GET':
         return comment_read()
 
-@communication.route('/test', methods=['GET'])
+@communication.route('/album', methods=['GET'])
+def getAlbumLinks():
+    if request.method == 'GET':
+        link = request.args.get('link')
+        number = request.args.get('index')
+        return get_album_links(link, number)
+
+@communication.route('/test/<path:track>', methods=['GET'])
 def test():
     if request.method == 'GET':
         return 'test succeed!'

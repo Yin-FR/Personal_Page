@@ -9,12 +9,18 @@ import VueAxios from "vue-axios";
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+import Viewer from "v-viewer";
+import 'viewerjs/dist/viewer.css'
+
+import vueAudioNative from 'vue-audio-native';
 
 Vue.config.productionTip = false;
 
 Vue.use(VueAxios, axios)
 Vue.use(Vuex);
 Vue.use(ElementUI);
+Vue.use(Viewer);
+Vue.use(vueAudioNative)
 
 
 new Vue({

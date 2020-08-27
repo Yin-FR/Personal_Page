@@ -59,7 +59,6 @@
                     withCredentials: true
                 });
                 axiosAjax.get("http://47.98.136.14:4100/communication/comments").then((res)=>{
-                    console.log(res.data);
                     this.commentsGroup = res.data;
                 }).catch((err)=>{
                     console.log(err);
@@ -85,7 +84,6 @@
                         withCredentials: true
                     });
                     axiosAjax.post('http://47.98.136.14:4100/communication/comments', commentObj, config).then((res)=>{
-                        console.log(res.data);
                         this.$notify({
                             title: "留言成功",
                             type: "success",
@@ -109,7 +107,6 @@
         },
         mounted() {
             this.getAllComments();
-            console.log(this.device)
         }
     }
 </script>

@@ -1,6 +1,10 @@
 <template>
     <div id="projectPage">
-        开发中哦 等等
+        没什么拿的出手的项目 🐶 先空着吧
+        <div style="width: 50%; margin: 0 auto;">
+
+        </div>
+
     </div>
 </template>
 

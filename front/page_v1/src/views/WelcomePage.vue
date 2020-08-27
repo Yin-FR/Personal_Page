@@ -46,7 +46,6 @@
                 // let that = this;
                 setTimeout(()=>{
                     this.shows.one =1;
-                    console.log(this.shows)
                 }, 1000);
                 setTimeout(()=>{
                     this.shows.five =1;

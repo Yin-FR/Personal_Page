@@ -19,10 +19,8 @@ export default {
         } else {
             state.device = 'pc'
         }
-        console.log(state.device)
     },
     [CHANGE_PAGE](state, {index}){
         state.pageSelect = index.page;
-        console.log(index.page)
     }
 }
