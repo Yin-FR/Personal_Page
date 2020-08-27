@@ -1,3 +1,4 @@
+<!--移动端欢迎页-->
 <template>
     <div id="welcomePage">
         <el-container>
@@ -59,10 +60,10 @@
                 setTimeout(()=>{
                     this.shows.four =1;
                 },7000);
-            }
+            } /*类对象中的setTimeout处理，实现定时渲染文字功能*/
         },
         mounted() {
-            this.showByTime();
+            this.showByTime(); /*渲染完成后展示动画*/
         }
     }
 </script>

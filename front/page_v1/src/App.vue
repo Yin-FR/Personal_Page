@@ -1,3 +1,4 @@
+<!--根组件-->
 <template>
     <div id="app">
         <router-view style="height: 100%"></router-view>
@@ -11,7 +12,9 @@
         components: {},
         mounted() {
             let index = 0;
+            /*页面渲染完毕则调用已经在vuex中的定义好的全局函数findDevice确定访问设备，并全局储存device变量以便后期使用*/
             this.$store.dispatch('findDevice', {index});
+            /*由device变量决定路由将要跳转的欢迎页面*/
             if (this.$store.state.device !== 'mobile') {
                 this.$router.push('/welcome')
             } else {

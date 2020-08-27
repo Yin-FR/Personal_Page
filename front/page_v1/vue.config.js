@@ -3,6 +3,8 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin');
 // 定义压缩文件类型
 const productionGzipExtensions = ['js', 'css']
 
+// 没有配置太多东西，就加了一个项目打包时候对js和css压缩，提高服务器的加载速度
+// 参考链接：https://blog.csdn.net/superKM/article/details/102627370
 module.exports = {
     //统一配置打包插件
     configureWebpack: {

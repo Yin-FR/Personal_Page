@@ -1,6 +1,8 @@
+<!--关于页-->
 <template>
     <div id="dairyPage">
         <div class="block">
+            <!--时间线插件，后期会添加拉取菜单功能-->
             <el-timeline>
                 <el-timeline-item timestamp="2020/6" placement="top" type="success">
                     <el-card>

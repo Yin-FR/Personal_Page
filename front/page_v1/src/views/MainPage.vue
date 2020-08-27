@@ -1,10 +1,14 @@
+<!--欢迎页后的总网页-->
 <template>
     <div id="mainPage">
+        <!--el-container实现容器布局-->
         <el-container>
             <el-header>
+                <!--导航-->
                 <Navi></Navi>
             </el-header>
             <el-main style="height: 100%">
+                <!--导航下的路由窗口-->
                 <router-view></router-view>
             </el-main>
         </el-container>

@@ -1,8 +1,9 @@
+<!--PC端留言块-->
 <template>
     <div id="commentBlock">
-        <div id="timePart"><div class="innerWord">{{timeComment}}</div></div>
-        <div id="userPart"><div class="innerWord">{{userName}}</div></div>
-        <div id="contentPart"><div class="innerWord">{{contentComment}}</div></div>
+        <div id="timePart"><div class="innerWord">{{timeComment}}</div></div> <!--时间-->
+        <div id="userPart"><div class="innerWord">{{userName}}</div></div> <!--user name-->
+        <div id="contentPart"><div class="innerWord">{{contentComment}}</div></div> <!--内容-->
     </div>
 </template>
 

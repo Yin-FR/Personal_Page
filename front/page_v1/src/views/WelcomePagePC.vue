@@ -1,7 +1,6 @@
+<!--PC端欢迎页面-->
 <template>
-
     <div id="welcomePage_pc">
-
         <el-container>
             <el-main>
                 <div id="lyrics">

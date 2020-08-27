@@ -1,6 +1,8 @@
+<!--主业-->
 <template>
     <div id="homePage">
         <div>
+            <!--点击图片实现路由跳转-->
             <img width="100%" src="https://personal-page-tan.oss-cn-beijing.aliyuncs.com/imgs/brestPage.jpg"
                  alt="img" @click="selectImg(0)"/>
             <img width="100%" src="https://personal-page-tan.oss-cn-beijing.aliyuncs.com/imgs/DairyPage.jpg"
@@ -8,6 +10,7 @@
             <img width="100%" src="https://personal-page-tan.oss-cn-beijing.aliyuncs.com/imgs/projectPage.jpg"
                  alt="img" @click="selectImg(2)"/>
         </div>
+        <!--版权信息-->
         <div class="copyright">
             <p > Copyright © 2020 Yin . All rights reserved. </p>
         </div>

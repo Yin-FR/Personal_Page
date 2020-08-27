@@ -1,3 +1,4 @@
+<!--留言页-->
 <template>
     <div id="commentPage">
         <div class="intro">
@@ -11,20 +12,20 @@
                           :time-comment="comment.timeSend"
                           :user-name="comment.userNameSend"
                           :content-comment="comment.messageSend">
-            </CommentBlock>
+            </CommentBlock> <!--pc和pad端留言显示区域-->
             <CommentBlockMobile v-if="isMobile"
                           v-for="comment in commentsGroup"
                           :key="comment.timeSend"
                           :user-name="comment.userNameSend"
                           :content-comment="comment.messageSend">
-            </CommentBlockMobile>
+            </CommentBlockMobile> <!--移动端留言显示区域，不包含留言时间-->
         </div>
 
         <div class="writeArea">
             <el-input v-model="userToBeSent" placeholder="昵称" clearable class="user_toBeSent"></el-input>
             <el-input v-model="contentToBeSent" placeholder="留言" clearable class="content_toBeSent"></el-input>
             <el-button class="sendBtn" type="primary" plain @click="sendComment">发送&emsp;&emsp;&emsp;<i class="el-icon-message"></i></el-button>
-        </div>
+        </div> <!--编辑留言区域-->
 
     </div>
 </template>
@@ -50,19 +51,19 @@
                 } else {
                     return 0
                 }
-            },
+            }, /*判断登陆设备是否为移动端*/
         },
         methods: {
             getAllComments(){
                 const axiosAjax = this.axios.create({
                     timeout: 1000*60,
-                    withCredentials: true
+                    withCredentials: true /*跨域许可*/
                 });
                 axiosAjax.get("http://47.98.136.14:4100/communication/comments").then((res)=>{
                     this.commentsGroup = res.data;
                 }).catch((err)=>{
                     console.log(err);
-                })
+                }) /*获取留言*/
             },
             sendComment(){
                 let userSend = this.userToBeSent;
@@ -103,10 +104,10 @@
                     })
                 }
 
-            }
+            } /*发送留言*/
         },
         mounted() {
-            this.getAllComments();
+            this.getAllComments(); /*页面渲染完成后获取留言*/
         }
     }
 </script>

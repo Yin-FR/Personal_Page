@@ -1,7 +1,8 @@
+<!--移动端留言块-->
 <template>
     <div id="commentBlockMobile">
-        <div id="userPartMobile"><div class="innerWord">{{userName}}</div></div>
-        <div id="contentPartMobile"><div class="innerWord">{{contentComment}}</div></div>
+        <div id="userPartMobile"><div class="innerWord">{{userName}}</div></div> <!--user name-->
+        <div id="contentPartMobile"><div class="innerWord">{{contentComment}}</div></div> <!--内容-->
     </div>
 </template>
 

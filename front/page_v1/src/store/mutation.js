@@ -1,5 +1,4 @@
 import {
-    CHANGE_PAGE,
     FIND_DEVICE
 } from "./mutation-type";
 
@@ -19,8 +18,5 @@ export default {
         } else {
             state.device = 'pc'
         }
-    },
-    [CHANGE_PAGE](state, {index}){
-        state.pageSelect = index.page;
     }
 }
