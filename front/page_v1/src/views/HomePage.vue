@@ -1,4 +1,4 @@
-<!--主业-->
+<!--主页-->
 <template>
     <div id="homePage">
         <div>
